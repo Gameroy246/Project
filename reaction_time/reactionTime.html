@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaction Speed Test</title>
+    <link rel="icon" type="image/png" href="../assets/logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="reactionTime.css">
+    <link rel="stylesheet" href="../customStyling.css">
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle" style="display: none;">🌓</button>
+    
+    <!-- Placeholder for Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Human Benchmark</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">  <!-- Changed to justify-content-end -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="app" class="mt-5">
+        <!-- Start Screen -->
+        <div id="startScreen" class="screen active">
+            <div class="card">
+                <h1>Test Your Reactions</h1>
+                <p>Click the screen as soon as you can when they turn green. Complete 1 attempt to see your average time.</p>
+                <button class="btn" id="startBtn">Start Test</button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="gameScreen" class="screen">
+            <h1 style="color: white;">Reaction Test</h1>
+            <p class="attempts">Attempt <span id="currentAttempt">1</span>/1</p>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="resultsScreen" class="screen">
+            <div class="card">
+                <h1>Your Results</h1>
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-label">Final Average</div>
+                        <div class="stat-value" id="finalAverage">0.000s</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Best Time</div>
+                        <div class="stat-value" id="finalBest">0.000s</div>
+                    </div>
+                </div>
+                <button class="btn" id="retryBtn">Try Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="reactionTime.js"></script>
+</body>
+</html>
